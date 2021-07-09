@@ -5,6 +5,7 @@ const movies = require("./movieSerice.js");
 const genre = require("./genreService.js");
 const login = require("./login.js");
 const register = require("./register");
+const emails = require("./emails.js");
 
 var cors = require("cors");
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use("/movies", movies);
 app.use("/login", login);
 app.use("/register", register);
+app.use("/emails", emails);
 app.use(genre);
 
 ////connecting to db///
